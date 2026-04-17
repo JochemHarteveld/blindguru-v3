@@ -1,42 +1,37 @@
-# sv
+# BlindGuru v3 — PokerClock
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Poker tournament clock with clubs, blind structures, and real-time game management.
 
-## Creating a project
+## Stack
+SvelteKit 5 · TypeScript · Tailwind CSS · Firebase (Auth / Firestore / Storage) · bun
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
+- Auth: register / login / reset password
+- Clubs: create groups, invite members, manage roles (admin / member)
+- Blind structures: rounds with small blind, big blind, ante + breaks — drag-and-drop reorder
+- Players: per-club player roster with avatars
+- Games: create with date/time, blind structure, player selection, random seat draw with table visualisation
+- Live clock: real-time synced countdown, blind info, next break, avg stack, admin controls (pause/skip/add time)
+
+## Develop
 
 ```sh
-# create a new project
-npx sv create my-app
+bun install
+bun run dev
 ```
 
-To recreate this project with the same configuration:
+## Build
 
 ```sh
-# recreate this project
+bun run build
+bun run preview
+```
+
+## Recreate project scaffold
+
+```sh
 bun x sv@0.15.1 create --template minimal --types ts --add prettier eslint vitest="usages:unit,component" tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:auto" mcp="ide:claude-code+setup:local" --install bun blindguru-v3
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Docs
+See `spec.md` for full data models, routes, and Firestore rules.
