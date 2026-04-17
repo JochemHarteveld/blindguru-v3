@@ -44,6 +44,9 @@
 				</a>
 
 				<div class="flex items-center gap-3">
+					<a href="/invites" class="text-sm font-medium text-secondary transition-colors hover:text-primary">
+						Invites
+					</a>
 					<div class="flex items-center gap-2">
 						<div class="flex h-7 w-7 items-center justify-center rounded-full bg-accent-gradient text-xs font-black text-text-inverse">
 							{initials || '?'}
