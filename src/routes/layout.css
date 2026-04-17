@@ -69,5 +69,6 @@
   html {
     background-color: var(--color-bg-base);
     color: var(--color-text-primary);
+    scroll-behavior: smooth;
   }
 }

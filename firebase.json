@@ -1,0 +1,20 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "eur3",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "BlindGuru",
+        "supportEmail": "jochemh83@gmail.com"
+      }
+    }
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
